@@ -12,4 +12,4 @@ target_include_directories(solver PUBLIC
 ${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib
 ${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib
 )
-target_link_libraries(solver formatter_ex_lib solver_lib)
+target_link_libraries(solver formatter_ex_lib solver)
