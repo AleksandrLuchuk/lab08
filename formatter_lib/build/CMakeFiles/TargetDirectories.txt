@@ -1,3 +1,0 @@
-/home/aleksandr/tmp/formatter_lib/build/CMakeFiles/rebuild_cache.dir
-/home/aleksandr/tmp/formatter_lib/build/CMakeFiles/edit_cache.dir
-/home/aleksandr/tmp/formatter_lib/build/CMakeFiles/formatter_lib.dir

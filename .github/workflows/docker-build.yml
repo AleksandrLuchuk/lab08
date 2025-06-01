@@ -1,0 +1,33 @@
+name: Docker Build and Run
+
+on: [push]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Build Docker image
+      run: docker build -t logger .
+      
+    - name: Create logs directory
+      run: mkdir -p logs
+      
+    - name: Run hello_world application
+      run: |
+        docker run -v "$(pwd)/logs/:/home/logs/" logger
+        
+    - name: Run solver application
+      run: |
+        docker run -v "$(pwd)/logs/:/home/logs/" -i logger <<EOF
+        1 -3 2
+        EOF
+        
+    - name: Upload log file as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: log-file
+        path: logs/log.txt
