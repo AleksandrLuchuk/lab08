@@ -31,3 +31,4 @@ jobs:
       with:
         name: equation-logs
         path: logs/log.txt
+#добавлен токен и логин для Docker.hub
